@@ -1,9 +1,7 @@
 <template>
     <div class="container">
         <button @click="swapCharts">Swap charts</button>
-        <div id="mermaid">
-            <div ref="mermaidVal"></div>
-        </div>
+        <div ref="mermaid"></div>
     </div>
 </template>
 
@@ -34,8 +32,9 @@
 
         methods: {
             renderGraph() {
-                mermaid.mermaidAPI.render('mermaidVal', this.chart, (svgCode) => {
-                    this.$refs.mermaidVal.innerHTML = svgCode;
+                // Le premier argument sert à affecter un id à la balise svg
+                mermaid.mermaidAPI.render('mermaidChart', this.chart, (svgCode) => {
+                    this.$refs.mermaid.innerHTML = svgCode;
                 });
             },
 
