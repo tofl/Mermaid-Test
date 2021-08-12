@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "mermaid": "^8.11.4",
+    "raw-loader": "^4.0.2",
     "vue": "^3.0.0"
   },
   "devDependencies": {
